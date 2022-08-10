@@ -10,7 +10,6 @@ class ServiceImpl implements Service
 
     function run(Input $input): Output
     {
-        // new Post(new Id(''), new Title('１２３４５６７８９０１２'))
         return new Output($this->query->search());
     }
 }

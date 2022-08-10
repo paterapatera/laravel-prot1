@@ -2,8 +2,6 @@
 
 namespace App\Util\Exception;
 
-use Exception;
-
-class StringLengthException extends Exception
+class StringLengthException extends \TypeError
 {
 }

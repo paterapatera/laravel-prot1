@@ -2,6 +2,6 @@
 
 namespace App\Util\Exception;
 
-class UlidException extends \TypeError
+class NullException extends \TypeError
 {
 }

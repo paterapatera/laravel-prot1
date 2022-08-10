@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -45,6 +46,14 @@ class Handler extends ExceptionHandler
     {
         $this->reportable(function (Throwable $e) {
             //
+        });
+    }
+
+    public function render($request, Throwable $e)
+    {
+        return parent::render($request, match (true) {
+            $e instanceof \TypeError => new UnprocessableEntityHttpException($e),
+            default => $e,
         });
     }
 }

@@ -2,20 +2,23 @@
 
 namespace App\Http\Controllers\Api\Post\Create;
 
-use App\Application\Post\Search\Output;
-use App\Domain\Post\Post;
+use App\Application\Post\Create\Input;
+use App\Domain\Post\Title;
+use App\Http\Controllers\Api\Request as ApiRequest;
 
-class Request
+class Request extends ApiRequest
 {
-    static public function make(Output $output): array
+    public function rules(): array
     {
         return [
-            'posts' => $output->posts->map(function (Post $post) {
-                return [
-                    'id' => $post->id->get(),
-                    'title' => $post->title->get(),
-                ];
-            })
+            'title' => 'string'
         ];
+    }
+
+    public function toInput(): Input
+    {
+        return new Input(
+            new Title($this->string('title'))
+        );
     }
 }
