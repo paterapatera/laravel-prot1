@@ -1,0 +1,23 @@
+// https://aka.ms/devcontainer.json
+{
+	"name": "myblog-laravel",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "laravel.test",
+	"workspaceFolder": "/var/www/html",
+	"settings": {},
+	"extensions": [
+		"mikestead.dotenv",
+		"bmewburn.vscode-intelephense-client",
+		"breezelin.phpstan",
+		"eamodio.gitlens",
+		"neilbrayfield.php-docblocker",
+		"dbaeumer.vscode-eslint",
+	],
+	"remoteUser": "sail",
+	"postCreateCommand": "chown -R 1000:1000 /var/www/html"
+	// "forwardPorts": [],
+	// "runServices": [],
+	// "shutdownAction": "none",
+}
