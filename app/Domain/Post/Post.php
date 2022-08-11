@@ -10,6 +10,11 @@ class Post implements Entity
     {
     }
 
+    static function of(string $id, string $title): self
+    {
+        return new self(new Id($id), new Title($title));
+    }
+
     /**
      * @return object{id: string, title: string}
      */

@@ -8,7 +8,6 @@ use App\Util\Invariant\UlidCheckable;
 class Id implements ValueObject
 {
     use UlidCheckable;
-
     function __construct(private string $value)
     {
         $this->throwIfNotUlid($value);

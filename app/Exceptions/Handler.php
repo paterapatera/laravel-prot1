@@ -2,12 +2,19 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Contracts\Container\Container;
+use App\Infra\Log\Logger;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
 {
+    public function __construct(public Logger $logger, Container $container)
+    {
+        parent::__construct($container);
+    }
+
     /**
      * A list of exception types with their corresponding custom log levels.
      *
@@ -47,6 +54,11 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+
+    public function report(Throwable $e)
+    {
+        $this->logger->exception($e);
     }
 
     public function render($request, Throwable $e)

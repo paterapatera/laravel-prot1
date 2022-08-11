@@ -2,11 +2,9 @@
 
 namespace App\Application\Post\Create;
 
-use App\Domain\Post\Title;
-
 class Input
 {
-  function __construct(public Title $title)
+  function __construct(public string $title)
   {
   }
 }
