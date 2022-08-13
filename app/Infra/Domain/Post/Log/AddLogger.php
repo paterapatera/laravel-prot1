@@ -18,7 +18,7 @@ class AddLogger implements DomainAddLogger
         Logger::behavior(self::FEATURE, $message);
     }
 
-    function added(Post $post): void
+    function addFinish(Post $post): void
     {
         $message = '追加完了';
         $data = $post->toObject();
