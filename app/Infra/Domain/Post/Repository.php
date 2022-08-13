@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Infra\Post;
+namespace App\Infra\Domain\Post;
 
 use App\Domain\Post\Post as DomainPost;
 use App\Domain\Post\Repository as DomainRepository;
-use App\Infra\Post\Post;
 
 class Repository implements DomainRepository
 {

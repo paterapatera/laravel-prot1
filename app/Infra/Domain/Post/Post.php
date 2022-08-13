@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infra\Post;
+namespace App\Infra\Domain\Post;
 
 use App\Domain\Post\Post as PostDomain;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
