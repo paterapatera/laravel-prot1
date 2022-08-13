@@ -6,7 +6,7 @@ use App\Domain\Entity;
 
 class Post implements Entity
 {
-    function __construct(public Id $id, public Title $title)
+    function __construct(private Id $id, private Title $title)
     {
     }
 
@@ -15,14 +15,15 @@ class Post implements Entity
         return new self(new Id($id), new Title($title));
     }
 
-    /**
-     * @return object{id: string, title: string}
-     */
-    function toObject(): object
+    function toObject(): PostDto
     {
-        return (object)[
-            'id' => $this->id->get(),
-            'title' => $this->title->get()
-        ];
+        return new PostDto($this->id->get(), $this->title->get());
+    }
+}
+
+class PostDto
+{
+    function __construct(public string $id, public string $title)
+    {
     }
 }

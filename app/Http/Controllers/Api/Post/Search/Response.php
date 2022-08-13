@@ -11,9 +11,10 @@ class Response
     {
         return [
             'posts' => $output->posts->map(function (Post $post) {
+                $data = $post->toObject();
                 return [
-                    'id' => $post->id->get(),
-                    'title' => $post->title->get(),
+                    'id' => $data->id,
+                    'title' => $data->title,
                 ];
             })
         ];

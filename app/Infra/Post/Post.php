@@ -13,6 +13,8 @@ class Post extends Model
     public $incrementing = false;
     protected $keyType = 'string';
 
+    protected $fillable = ['id', 'title'];
+
     function toDomain(): PostDomain
     {
         return PostDomain::of($this->id, $this->title);
