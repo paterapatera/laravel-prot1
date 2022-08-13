@@ -32,7 +32,7 @@ class CreateLogger implements DomainCreateLogger, AppCreateLogger
     {
         $message = '作成失敗';
         $data = $post->toObject();
-        Logger::audit(self::FEATURE, $message, ['id' => $data->id, 'title' => $data->title]);
+        Logger::auditError(self::FEATURE, $message, ['id' => $data->id, 'title' => $data->title]);
         Logger::error(self::FEATURE, $message);
     }
 

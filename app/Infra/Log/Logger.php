@@ -21,6 +21,11 @@ class Logger
         \Log::info($message, ['feature' => $feature, ...$context, 'type' => 'audit']);
     }
 
+    static function auditError(string $feature, string $message, array $context): void
+    {
+        \Log::error($message, ['feature' => $feature, ...$context, 'type' => 'audit']);
+    }
+
     static function exception(\Throwable $e): void
     {
         \Log::error($e->getMessage(), [
