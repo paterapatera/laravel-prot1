@@ -21,12 +21,13 @@ class JsonFormatter extends LineFormatter
      */
     public function format($record): string
     {
-        return json_encode([
+        $log = json_encode([
             'datetime' => (new CarbonImmutable($record['datetime']))->timezone('Asia/Tokyo')->toAtomString(),
             'level' => $record['level_name'],
             'message' => $record['message'],
             ...$record['context'],
             // 'extra' => $record['extra']
         ], JSON_UNESCAPED_UNICODE) ?: '{}';
+        return $log . "\n";
     }
 }
