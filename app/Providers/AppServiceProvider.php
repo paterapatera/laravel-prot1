@@ -8,8 +8,8 @@ class AppServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        Application\ServiceProvider::regist($this->app);
-        Domain\ServiceProvider::regist($this->app);
+        MyBlogApi\Application\ServiceProvider::regist($this->app);
+        MyBlogApi\Domain\ServiceProvider::regist($this->app);
     }
 
     public function boot(): void
