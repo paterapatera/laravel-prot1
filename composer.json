@@ -14,7 +14,10 @@
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.12",
+        "brianium/paratest": "^6.6",
+        "eloquent/phony-kahlan": "^4.0",
         "fakerphp/faker": "^1.9.1",
+        "kahlan/kahlan": "^5.2",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
@@ -52,6 +55,15 @@
         ],
         "stan": [
             "phpstan"
+        ],
+        "stest": [
+            "php artisan test -p --testsuite=Small --stop-on-failure"
+        ],
+        "mtest": [
+            "php artisan test -p --testsuite=Middle --stop-on-failure"
+        ],
+        "spec": [
+            "kahlan"
         ]
     },
     "extra": {

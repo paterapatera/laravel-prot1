@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\MyBlogApi\Post\Create;
+namespace App\Http\Controllers\MyBlog\Post\Create;
 
-use App\MyBlogApi\Application\Post\Create\Logger;
-use App\MyBlogApi\Application\Post\Create\Service;
-use App\Http\Controllers\MyBlogApi\Controller as ApiController;
-use App\Http\Controllers\MyBlogApi\Presenter;
+use App\MyBlog\Application\Post\Create\Logger;
+use App\MyBlog\Application\Post\Create\Service;
+use App\Http\Controllers\MyBlog\Controller as ApiController;
+use App\Http\Controllers\MyBlog\Presenter;
 use Illuminate\Http\JsonResponse;
 
 class Controller extends ApiController

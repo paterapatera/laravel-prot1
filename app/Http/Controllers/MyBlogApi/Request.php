@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\MyBlogApi;
+namespace App\Http\Controllers\MyBlog;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;

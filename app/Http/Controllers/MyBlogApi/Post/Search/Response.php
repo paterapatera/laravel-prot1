@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\MyBlogApi\Post\Search;
+namespace App\Http\Controllers\MyBlog\Post\Search;
 
-use App\MyBlogApi\Application\Post\Search\Output;
-use App\MyBlogApi\Domain\Post\Post;
+use App\MyBlog\Application\Post\Search\Output;
+use App\MyBlog\Domain\Post\Post;
 
 class Response
 {
@@ -11,7 +11,7 @@ class Response
     {
         return [
             'posts' => $output->posts->map(function (Post $post) {
-                $data = $post->toObject();
+                $data = $post->val();
                 return [
                     'id' => $data->id,
                     'title' => $data->title,

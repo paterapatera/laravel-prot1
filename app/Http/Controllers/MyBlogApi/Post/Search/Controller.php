@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\MyBlogApi\Post\Search;
+namespace App\Http\Controllers\MyBlog\Post\Search;
 
-use App\MyBlogApi\Application\Post\Search\Service;
-use App\Http\Controllers\MyBlogApi\Controller as ApiController;
-use App\Http\Controllers\MyBlogApi\Presenter;
+use App\MyBlog\Application\Post\Search\Service;
+use App\Http\Controllers\MyBlog\Controller as ApiController;
+use App\Http\Controllers\MyBlog\Presenter;
 use Illuminate\Http\JsonResponse;
 
 class Controller extends ApiController

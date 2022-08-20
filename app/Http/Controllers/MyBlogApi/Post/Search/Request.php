@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\MyBlogApi\Post\Search;
+namespace App\Http\Controllers\MyBlog\Post\Search;
 
-use App\MyBlogApi\Application\Post\Search\Input;
-use App\Http\Controllers\MyBlogApi\Request as ApiRequest;
+use App\MyBlog\Application\Post\Search\Input;
+use App\Http\Controllers\MyBlog\Request as ApiRequest;
 
 class Request extends ApiRequest
 {

@@ -5,8 +5,11 @@
          colors="true"
 >
     <testsuites>
-        <testsuite name="Unit">
-            <directory suffix="Test.php">./tests/Unit</directory>
+        <testsuite name="Small">
+            <directory suffix="TestS.php">./app</directory>
+        </testsuite>
+        <testsuite name="Middle">
+            <directory suffix="TestM.php">./app</directory>
         </testsuite>
         <testsuite name="Feature">
             <directory suffix="Test.php">./tests/Feature</directory>
@@ -16,6 +19,10 @@
         <include>
             <directory suffix=".php">./app</directory>
         </include>
+        <exclude>
+            <directory suffix="TestS.php">./app</directory>
+            <directory suffix="TestM.php">./app</directory>
+        </exclude>
     </coverage>
     <php>
         <env name="APP_ENV" value="testing"/>

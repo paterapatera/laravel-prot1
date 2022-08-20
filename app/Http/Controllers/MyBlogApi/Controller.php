@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\MyBlogApi;
+namespace App\Http\Controllers\MyBlog;
 
 use App\Http\Controllers\Controller as BaseController;
 
