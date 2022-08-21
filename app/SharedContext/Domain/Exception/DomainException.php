@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MyBlog\Domain\Exceptin;
+namespace App\SharedContext\Domain\Exceptin;
 
 use Exception;
 

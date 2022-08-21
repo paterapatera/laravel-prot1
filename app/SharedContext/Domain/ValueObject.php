@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MyBlog\Domain;
+namespace App\SharedContext\Domain;
 
 interface ValueObject
 {

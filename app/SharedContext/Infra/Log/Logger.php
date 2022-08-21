@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MyBlog\Infra\Log;
+namespace App\SharedContext\Infra\Log;
 
 class Logger
 {

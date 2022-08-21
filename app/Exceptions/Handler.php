@@ -3,7 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Contracts\Container\Container;
-use App\MyBlog\Infra\Log\Logger;
+use App\SharedContext\Infra\Log\Logger;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 use Throwable;

@@ -4,7 +4,7 @@ namespace App\MyBlog\Infra\Application\Post\Create;
 
 use App\MyBlog\Application\Post\Create\Input;
 use App\MyBlog\Application\Post\Create\Logger as AppCreateLogger;
-use App\MyBlog\Infra\Log\Logger as InfraLogger;
+use App\SharedContext\Infra\Log\Logger as InfraLogger;
 
 class Logger implements AppCreateLogger
 {

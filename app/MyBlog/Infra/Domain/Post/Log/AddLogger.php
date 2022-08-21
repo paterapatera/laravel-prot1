@@ -4,7 +4,7 @@ namespace App\MyBlog\Infra\Domain\Post\Log;
 
 use App\MyBlog\Domain\Post\Log\AddLogger as DomainAddLogger;
 use App\MyBlog\Domain\Post\Post;
-use App\MyBlog\Infra\Log\Logger;
+use App\SharedContext\Infra\Log\Logger;
 
 class AddLogger implements DomainAddLogger
 {

@@ -2,7 +2,7 @@
 
 namespace App\MyBlog\Domain\Post;
 
-use App\MyBlog\Domain\ValueObject;
+use App\SharedContext\Domain\ValueObject;
 use App\Util\Invariant\StringCheckable;
 
 class Title implements ValueObject

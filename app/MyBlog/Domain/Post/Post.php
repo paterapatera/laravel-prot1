@@ -2,7 +2,7 @@
 
 namespace App\MyBlog\Domain\Post;
 
-use App\MyBlog\Domain\Entity;
+use App\SharedContext\Domain\Entity;
 
 class Post implements Entity
 {
