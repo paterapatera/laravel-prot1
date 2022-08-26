@@ -1,0 +1,17 @@
+inertiaインストール
+composer require inertiajs/inertia-laravel
+php artisan inertia:middleware
+yarn add @inertiajs/inertia @inertiajs/inertia-react @inertiajs/progress @types/react @types/react-dom @vitejs/plugin-react
+最新版reactで警告が出たら↓バージョンを合わせる
+yarn add react@17 react-dom@17
+composer require tightenco/ziggy
+yarn add -D tailwindcss
+yarn tailwindcss init
+
+app.blade.phpを作ってinertia.js公式のテンプレートを設置
+カーネルのwebにミドルウェア設置公式参照
+webpack.mix.jsの作成
+↓この設定が必要
+https://saunabouya.com/2022/07/25/laravel9-sail-react-typescript-vite/
+
+
